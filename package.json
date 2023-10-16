@@ -1,0 +1,28 @@
+{
+  "name": "sky-starter-app",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "tsc",
+    "sky": "xstate sky \"./src/**/*.ts?(x)\""
+  },
+  "dependencies": {
+    "@statelyai/sky": "0.0.4",
+    "@statelyai/sky-react": "0.0.4",
+    "@xstate/react": "4.0.0-beta.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "xstate": "5.0.0-beta.33"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.1.0",
+    "@xstate/cli": "0.5.7",
+    "prettier": "^3.0.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "typescript": "5.2.2",
+    "vite": "^4.4.11"
+  }
+}
