@@ -27,13 +27,13 @@ After you've started the app, you will see two pages:
 
 ### Home Page
 
-![CleanShot 2023-10-19 at 18 56 23@2x](https://github.com/statelyai/sky-starter-app/assets/167574/7672decd-f8b2-4a5c-839d-6eb7f2a63172)
+![home](https://github.com/statelyai/sky-starter-app/assets/167574/c297aab2-153f-4fe6-854e-3709f763603b)
 
 The home page is a basic page with links to our docs and examples.
 
 ### Counter example
 
-![CleanShot 2023-10-19 at 18 56 33@2x](https://github.com/statelyai/sky-starter-app/assets/167574/95ed95f4-0fd2-4b4b-b50d-0c5c4bc4323e)
+![counter](https://github.com/statelyai/sky-starter-app/assets/167574/268d52d3-380d-4929-8b33-ee512ac3d775)
 
 The counter example is a simple counter that shows how to use Stately Sky.
 
