@@ -1,20 +1,32 @@
 import { useStatelyActor } from '@statelyai/sky-react';
+import { useState } from 'react';
 import { EventFrom } from 'xstate';
 import { skyConfig } from './counter.sky';
 
 const url = 'https://sky.stately.ai/Wu5gAj';
 
 export default function Counter() {
-  const [state, send] = useStatelyActor(
+  // Try opening the app in multiple tabs to see the count change
+  const [numberOfPlayers, setNumberOfPlayers] = useState(0);
+
+  const [state, send, , sky] = useStatelyActor(
     {
       url: 'https://sky.stately.ai/Wu5gAj',
       sessionId: 'shared-counter',
+      // These callbacks are optional, but can be useful for updating UI
+      // Warning the numbers are not guaranteed to be accurate in dev mode because of hot-reloading
+      // To see the real current number try a page-refresh
+      onPlayerJoined(info) {
+        setNumberOfPlayers(info.numberOfPlayers);
+      },
+      onPlayerLeft(info) {
+        setNumberOfPlayers(info.numberOfPlayers);
+      },
     },
     skyConfig,
   );
 
-  const isConnecting = send === undefined;
-  if (isConnecting) {
+  if (sky.isConnecting) {
     return <p>Connecting to Stately Sky...</p>;
   }
 
@@ -30,6 +42,9 @@ export default function Counter() {
       </h1>
       <h2>
         <strong>Current count: {JSON.stringify(state.context.count)}</strong>
+      </h2>
+      <h2>
+        <strong>Number of users in session: {numberOfPlayers}</strong>
       </h2>
 
       <div className="event-buttons">
