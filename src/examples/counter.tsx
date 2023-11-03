@@ -11,7 +11,7 @@ export default function Counter() {
 
   const [state, send, , sky] = useStatelyActor(
     {
-      url: 'https://sky.stately.ai/Wu5gAj',
+      url,
       sessionId: 'shared-counter',
       // These callbacks are optional, but can be useful for updating UI
       // Warning the numbers are not guaranteed to be accurate in dev mode because of hot-reloading
