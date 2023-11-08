@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 .env
 
+copy.env
+
 *.typegen.ts

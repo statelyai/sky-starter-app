@@ -1,0 +1,38 @@
+/* Styles.css */
+
+.trafficLight {
+  background: black;
+  width: 100px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 2em;
+}
+
+.light {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.red {
+  background: red;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.green {
+  background: green;
+}
+
+.active {
+  opacity: 1;
+}
