@@ -20,22 +20,30 @@ Start the app:
 npm run dev
 ```
 
-After you've started the app, you will see two pages:
+After you've started the app, you will see three pages:
 
 - Home page
 - Counter example
+- Traffic light example
 
 ### Home Page
 
-![home](https://github.com/statelyai/sky-starter-app/assets/167574/c297aab2-153f-4fe6-854e-3709f763603b)
+![Home](https://github.com/statelyai/sky-starter-app/assets/167574/ae2e7087-89f6-43ab-b836-356d77ffe0f2)
 
 The home page is a basic page with links to our docs and examples.
 
 ### Counter example
 
-![counter](https://github.com/statelyai/sky-starter-app/assets/167574/268d52d3-380d-4929-8b33-ee512ac3d775)
+![Counter](https://github.com/statelyai/sky-starter-app/assets/167574/df84babc-db59-4cf7-86a0-3b8f0090a6fb)
 
 The counter example is a simple counter that shows how to use Stately Sky.
+
+### Traffic light example
+
+![TrafficLight](https://github.com/statelyai/sky-starter-app/assets/167574/29492de9-874b-4dc0-b8cf-598ff952303e)
+
+The traffic light example shows how you can even use delayed transitions on Sky.
+
 
 ### .env file
 
