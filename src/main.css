@@ -75,10 +75,12 @@ button:focus-visible {
   }
 }
 
-.meta-media-image {
-  border-radius: 24px;
-  border: 12px solid #333;
-  height: 500px;
+.welcome-text {
+  font-size: 1.3em;
+}
+
+.welcome-text > p {
+  margin: 0.2em;
 }
 
 .sky-header {
@@ -110,14 +112,56 @@ button:focus-visible {
   align-self: center;
 }
 
+.app-pages {
+  display: flex;
+  width: fit-content;
+  align-self: center;
+  gap: 0.5em;
+}
+
+.app-page {
+  text-transform: capitalize;
+}
+
+.app-active-page {
+  text-transform: capitalize;
+  background-color: #646cff;
+}
+
 .button-group {
   display: flex;
   justify-content: center;
   gap: 12px;
 }
 
+.next-events {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  align-items: center;
+  border-radius: 8px;
+  gap: 0.5em;
+}
+
+.next-events > * {
+  padding: 0;
+  margin: 0;
+}
+
 .event-buttons {
   display: flex;
   justify-content: center;
   gap: 0.5em;
+}
+
+.example-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 2em;
+}
+
+.example-info > * {
+  margin: 0;
+  padding: 0;
 }

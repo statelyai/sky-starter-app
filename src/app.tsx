@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Counter from './examples/counter';
+import TrafficLight from './examples/trafficLight/trafficLight';
 import Home from './home';
 
-type Page = 'home' | 'counter';
+const pages = ['home', 'counter', 'traffic light'] as const;
+type Page = (typeof pages)[number];
 
 function getComponent(page: Page) {
   switch (page) {
@@ -10,8 +12,8 @@ function getComponent(page: Page) {
       return <Home />;
     case 'counter':
       return <Counter />;
-    default:
-      return <Home />;
+    case 'traffic light':
+      return <TrafficLight />;
   }
 }
 
@@ -22,9 +24,17 @@ export default function App() {
     <div className="app">
       <div className="app-header">
         <p className="sky-header">Stately Sky Starter ⛅</p>
-        <button onClick={() => setPage(page !== 'home' ? 'home' : 'counter')}>
-          {page === 'home' ? 'Try counter example' : 'Home'}
-        </button>
+        <div className="app-pages">
+          {pages.map((p) => (
+            <button
+              key={p}
+              className={p === page ? 'app-active-page' : 'app-page'}
+              onClick={() => setPage(p)}
+            >
+              {p}
+            </button>
+          ))}
+        </div>
       </div>
       {getComponent(page)}
     </div>
