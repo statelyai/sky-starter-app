@@ -12,6 +12,7 @@ export default function Counter() {
 
   const [state, send, , sky] = useStatelyActor(
     {
+      apiKey: import.meta.env.VITE_SKY_API_KEY,
       url,
       sessionId: 'shared-counter',
       // These callbacks are optional, but can be useful for updating UI
