@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "lint": "tsc",
-    "sky": "xstate sky \"./src/**/*.ts?(x)\" -r"
+    "sky": "xstate sky \"./src/**/*.ts?(x)\""
   },
   "dependencies": {
     "@statelyai/sky": "0.0.8",
@@ -20,7 +20,7 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.1.1",
-    "@xstate/cli": "0.5.8",
+    "@xstate/cli": "0.5.9",
     "prettier": "^3.1.0",
     "prettier-plugin-organize-imports": "^3.2.4",
     "typescript": "5.2.2",
