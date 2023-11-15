@@ -6,7 +6,7 @@ import { skyConfig } from './counter.sky';
 
 const url = 'https://sky.stately.ai/Wu5gAj';
 
-export default function Counter() {
+export default function Counter({ show }: { show: boolean }) {
   // Try opening the app in multiple tabs to see the count change
   const [numberOfPlayers, setNumberOfPlayers] = useState(0);
 
@@ -27,6 +27,10 @@ export default function Counter() {
     },
     skyConfig,
   );
+
+  if (!show) {
+    return null;
+  }
 
   if (sky.isConnecting) {
     return <p>Connecting to Stately Sky...</p>;

@@ -6,15 +6,14 @@ import Home from './home';
 const pages = ['home', 'counter', 'trafficlight'] as const;
 type Page = (typeof pages)[number];
 
-function getComponent(page: Page) {
-  switch (page) {
-    case 'home':
-      return <Home />;
-    case 'counter':
-      return <Counter />;
-    case 'trafficlight':
-      return <TrafficLight />;
-  }
+function renderComponents(page: Page) {
+  return (
+    <>
+      <Home show={page === 'home'} />
+      <Counter show={page === 'counter'} />
+      <TrafficLight show={page === 'trafficlight'} />
+    </>
+  );
 }
 
 function getPage() {
@@ -58,7 +57,7 @@ export default function App() {
           ))}
         </div>
       </div>
-      {getComponent(page)}
+      {renderComponents(page)}
     </div>
   );
 }

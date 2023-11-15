@@ -8,7 +8,7 @@ import { skyConfig } from './trafficLight.sky';
 
 const url = 'https://sky.stately.ai/Q9VvW9';
 
-export default function TrafficLight() {
+export default function TrafficLight({ show }: { show: boolean }) {
   // Try opening the app in multiple tabs to see the count change
   const [numberOfPlayers, setNumberOfPlayers] = useState(0);
 
@@ -29,6 +29,10 @@ export default function TrafficLight() {
     },
     skyConfig,
   );
+
+  if (!show) {
+    return null;
+  }
 
   if (sky.isConnecting) {
     return <p>Connecting to Stately Sky...</p>;

@@ -1,4 +1,8 @@
-export default function Home() {
+export default function Home({ show }: { show: boolean }) {
+  if (!show) {
+    return null;
+  }
+
   return (
     <div className="welcome-text">
       <p>Welcome to the Stately Sky Starter App!</p>
