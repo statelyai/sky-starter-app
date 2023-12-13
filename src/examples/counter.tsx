@@ -1,5 +1,6 @@
 import { useStatelyActor } from '@statelyai/sky-react';
 import { useState } from 'react';
+import { __unsafe_getAllOwnEventDescriptors } from 'xstate';
 import { Footer } from '../components/Footer';
 import { NextEvents } from '../components/NextEvents';
 import { skyConfig } from './counter.sky';
@@ -40,7 +41,10 @@ export default function Counter() {
         <p>Number of users in session: {numberOfPlayers}</p>
       </div>
 
-      <NextEvents nextEvents={state.nextEvents} send={send} />
+      <NextEvents
+        nextEvents={__unsafe_getAllOwnEventDescriptors(state)}
+        send={send}
+      />
       <Footer url={url} />
     </div>
   );
