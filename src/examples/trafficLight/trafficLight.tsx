@@ -1,5 +1,6 @@
 import { useStatelyActor } from '@statelyai/sky-react';
 import { useState } from 'react';
+import { __unsafe_getAllOwnEventDescriptors } from 'xstate';
 import { Footer } from '../../components/Footer';
 import { NextEvents } from '../../components/NextEvents';
 import { Light } from './Light';
@@ -49,7 +50,10 @@ export default function TrafficLight() {
         <p>Number of users observing the lights: {numberOfPlayers}</p>
       </div>
 
-      <NextEvents nextEvents={state.nextEvents} send={send} />
+      <NextEvents
+        nextEvents={__unsafe_getAllOwnEventDescriptors(state)}
+        send={send}
+      />
       <Footer url={url} />
     </div>
   );
