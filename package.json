@@ -8,8 +8,8 @@
     "sky": "xstate sky \"./src/**/*.ts?(x)\" -r"
   },
   "dependencies": {
-    "@statelyai/sky": "0.0.10",
-    "@statelyai/sky-react": "0.0.10",
+    "@statelyai/sky": "0.0.11",
+    "@statelyai/sky-react": "0.0.11",
     "@xstate/react": "4.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
