@@ -7,7 +7,7 @@ import { Light } from './Light';
 import './lights.css';
 import { skyConfig } from './trafficLight.sky';
 
-const url = 'https://sky.stately.ai/Q9VvW9';
+const url = 'https://sky.stately.ai/C1Q8MC';
 
 export default function TrafficLight() {
   // Try opening the app in multiple tabs to see the count change
