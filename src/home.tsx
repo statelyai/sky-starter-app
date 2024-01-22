@@ -1,3 +1,23 @@
+import PartySocket from 'partysocket';
+
+const partySocket = new PartySocket({
+  host: 'http://localhost:1999',
+  room: 'inspect',
+  id: 'banana',
+});
+partySocket.onclose = () => {
+  console.log('closed');
+};
+partySocket.onopen = () => {
+  console.log('opened');
+};
+partySocket.onmessage = (message) => {
+  console.log(message);
+};
+partySocket.onerror = (error) => {
+  console.log(error);
+};
+
 export default function Home() {
   return (
     <div className="welcome-text">

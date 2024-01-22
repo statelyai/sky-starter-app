@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import Counter from './examples/counter';
+import Inspection from './examples/inspection';
 import TrafficLight from './examples/trafficLight/trafficLight';
 import Home from './home';
 
-const pages = ['home', 'counter', 'trafficlight'] as const;
+const pages = ['home', 'counter', 'trafficlight', 'inspection'] as const;
 type Page = (typeof pages)[number];
 
 function getComponent(page: Page) {
@@ -14,6 +15,8 @@ function getComponent(page: Page) {
       return <Counter />;
     case 'trafficlight':
       return <TrafficLight />;
+    case 'inspection':
+      return <Inspection />;
   }
 }
 
